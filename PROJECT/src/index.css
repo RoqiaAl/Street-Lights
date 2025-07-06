@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  /* display: none; */
+}
+.body {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(210, 210, 210, 0);
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(210, 210, 210, 1);
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow_cro {
+  overflow: auto !important;
+}
+
+.overflow-auto::-webkit-scrollbar-thumb {
+  transition: opacity 0.3s;
+}
+
+.toggle-checkbox:checked {
+  right: 0;
+  border-color: #fbbf24;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #fbbf24;
+}
+
+.overflow-auto:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(210, 210, 210, 1);
+}
+.overflow_cro::-webkit-scrollbar-thumb {
+  transition: opacity 0.3s;
+}
+
+.overflow_cro:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(210, 210, 210, 1);
+}
+:root {
+  --theme-color: #ffbf00;
+  --light-theme: #fff9e5;
+  --custom-gray: rgba(44, 54, 63, 1);
+  --custom-light-gray: rgba(244, 244, 244, 1);
+  --custom-dark-gray: rgba(140, 140, 140, 1);
+  --steel-blue: rgba(67, 82, 96, 1);
+  --soft-gold: rgba(255, 191, 0, 0.2);
+  --pale-sunshine: rgba(255, 191, 0, 1);
+  --light-yellow: rgba(244, 219, 80, 1);
+  --light-green: rgba(107, 232, 105, 1);
+  --customYellow: rgba(244, 219, 80, 1);
+}
+body {
+  font-family: "Work Sans" !important;
+  background-color: #f7fafc;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+.toggle-switch {
+  width: 40px;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+.toggle-switch:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: left 0.3s;
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: #4ade80;
+}
+.toggle-checkbox:checked + .toggle-switch:before {
+  left: 22px;
+}
+.toggle-container {
+  position: relative;
+  width: 158px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+.toggle-option {
+  flex: 1;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.toggle-knob {
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  width: 50%;
+  border-radius: 18px;
+  background-color: #007bff;
+  transition: left 0.3s ease;
+}
+
+.on .toggle-knob {
+  left: 50%;
+}
+
+.off .toggle-knob {
+  left: 3px;
+}
+
+.on .toggle-option:nth-child(1),
+.off .toggle-option:nth-child(2) {
+  color: white;
+}
+.custom-toast {
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+#custom-toast-container {
+  z-index: 9999; /* Ensure it's on top of other components */
+}
